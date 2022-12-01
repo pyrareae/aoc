@@ -1,8 +1,11 @@
-puts DATA.readlines
+top = DATA.readlines
   .chunk_while{|a,b| ![a,b].include? "\n"}
   .reject{|entry| entry == ["\n"]}
   .map{|elf| elf.map(&:to_i).sum}
-  .max
+  .sort[-3...]
+
+puts top.last
+puts top.sum
 __END__
 9195
 5496
