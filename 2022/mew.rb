@@ -9,3 +9,9 @@ class Object
     self
   end
 end
+
+class Mew
+  def self.data
+    DATA.readlines.map(&:chomp)
+  end
+end
